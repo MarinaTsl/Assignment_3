@@ -9,7 +9,7 @@ words = txt.split()
 for i in range(len(words)):
     #If it is not string of alphabetical characters, pop it out of the list
     if (words[i].isalpha()==False):
-        words.pop(words[i])       
+        words.pop(i)       
 
     #Else, if it is a word shorter than 20 characters: 
     elif (i>0 and len(words[i])<20):
@@ -18,7 +18,7 @@ for i in range(len(words)):
            #for a word whose length plus the current word's length is 20
             if(len(words[i])+len(words[k])==20):
                 #If found, pop the word
-                words.pop(words[i]); words.pop(words[k])
+                words.pop(i); words.pop(k)
                 break
 
 #To find the length of the longest word:
