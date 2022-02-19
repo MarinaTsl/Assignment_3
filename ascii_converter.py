@@ -1,6 +1,8 @@
 #To read the .txt file:
-file=open("two_cities_ascii.txt")
-txt=file.read()
+with open("two_cities_ascii.txt") as file:
+    txt=file.read()
+    #file=open("two_cities_ascii.txt",'r')
+    
 
 #To split the given text: 
 words = txt.split()
@@ -43,11 +45,4 @@ for i in range(longest_word):
         print("1 {} letter word".format(i+1))
     else:
         print("{} {} letter words ".format(stats[i], i+1))
-
-
-
-
-
-
-
 
