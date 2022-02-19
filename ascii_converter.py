@@ -10,11 +10,15 @@ for i in range(len(words)):
     #If it is not string of alphabetical characters, pop it out of the list
     if (words[i].isalpha()==False):
         words.pop(words[i])       
-    #If it is a string of alphabetical characters, check to see if it's length plus the previous' length equals 20
-    elif (len(words[i])+len(words[i-1])==20):
-        words.pop(words[i]); words.pop(words[i-1])
 
-
-    
+    #Else, if it is a word shorter than 20 characters: 
+    elif (i>0 and len(words[i])<20]):
+        #Search the already checked part of the list 
+        for k in range(i):
+           #for a word whose length plus the current word's length is 20
+            if(len(words[i]+len(words[k])==20):
+                #If found, pop the word
+                words.pop(words[i]); words.pop(words[k])
+                break
 
 
