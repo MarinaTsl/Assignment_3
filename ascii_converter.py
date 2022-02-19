@@ -21,4 +21,33 @@ for i in range(len(words)):
                 words.pop(words[i]); words.pop(words[k])
                 break
 
+#To find the length of the longest word:
+longest_word=0
+for i in range(len(words)):
+    if(len(words[i])>longest_word):
+        longest_word=len(words[i])
+
+stats=[]
+
+for i in range(len(words)):
+    
+    #Word length counter initialization:
+    if (i<longest_word):
+        stats[i]=0
+    
+    stats[len(words[i])-1]+=1
+
+#Printing the statistics:
+for i in range(longest_word): 
+    if (stats[i]==1):
+        print("1 {} letter word".format(i+1))
+    else:
+        print("{} {} letter words ".format(stats[i], i+1))
+
+
+
+
+
+
+
 
