@@ -29,12 +29,10 @@ for i in range(len(words)):
 
 stats=[]
 
-for i in range(len(words)):
-    
+for i in range(len(words)):   
     #Word length counter initialization:
     if (i<longest_word):
-        stats[i]=0
-    
+        stats[i]=0    
     stats[len(words[i])-1]+=1
 
 #Printing the statistics:
