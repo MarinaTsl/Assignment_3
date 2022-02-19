@@ -27,13 +27,11 @@ for i in range(len(words)):
     if(len(words[i])>longest_word):
         longest_word=len(words[i])
 
-stats=[]
+#Word length counter initialization:
+stats=[0]*longest_word
 
 for i in range(len(words)):   
-    #Word length counter initialization:
-    if (i<longest_word):
-        stats[i]=0    
-    stats[len(words[i])-1]+=1
+   stats[len(words[i])-1]+=1
 
 #Printing the statistics:
 for i in range(longest_word): 
